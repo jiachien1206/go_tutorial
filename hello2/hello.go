@@ -16,10 +16,17 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	
-	message, err := greetings.Hello("")
+	// correct input
+	message, err := greetings.Hello("Nini")
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println(message)
+
+	// with error
+	m, err := greetings.Hello("")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(m)
 }
