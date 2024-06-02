@@ -23,6 +23,14 @@ func main() {
 	}
 	fmt.Println(message)
 
+	// A slice of names
+	names := []string{"Ting", "Tim", "Jason"}
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(messages)
+
 	// with error
 	m, err := greetings.Hello("")
 	if err != nil {
